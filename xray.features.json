@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "features": [
+    {
+      "id": "catalogue",
+      "name": "Catalogue",
+      "description": "Browse the products and add them to the cart",
+      "entryPoints": ["src/pages/Home.tsx#Home"]
+    },
+    {
+      "id": "cart",
+      "name": "Cart",
+      "description": "See what you added and how much it costs",
+      "entryPoints": ["src/pages/Cart.tsx#Cart"]
+    }
+  ]
+}
