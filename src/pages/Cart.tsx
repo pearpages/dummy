@@ -5,7 +5,7 @@ export default function Cart() {
   const cart = useCart();
   return (
     <main>
-      <p>{cart.lines.length} items</p>
+      <p>{cart.lines.length} item(s) in your cart</p>
       <PriceTag amount={cart.total} />
     </main>
   );
