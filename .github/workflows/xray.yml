@@ -8,10 +8,25 @@ permissions:
   pull-requests: write
 
 jobs:
+  # Trial of pearpages/xray@feat/api-and-bundle: timed without the bundle (no comment)...
   xray:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: pearpages/xray@main
+          persist-credentials: false
+      - uses: pearpages/xray@feat/api-and-bundle
+        with:
+          comment: "false"
+  # ...and with it (posts the comment).
+  xray-bundle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: pearpages/xray@feat/api-and-bundle
+        with:
+          bundle: "true"
