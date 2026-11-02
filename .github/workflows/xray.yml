@@ -15,6 +15,6 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false # the bundle build runs PR code
-      - uses: pearpages/xray@v0
+      - uses: pearpages/xray@feat/quality-phase-2
         with:
           bundle: "true"
